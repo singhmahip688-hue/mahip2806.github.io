@@ -1,31 +1,127 @@
 /* ===== GLOBAL ===== */
+* { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #121212;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f0f0f;
   color: #e0e0e0;
   scroll-behavior: smooth;
+  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: #4aa3f0;
+a { text-decoration: none; color: #4aa3f0; }
+
+/* ===== NAVBAR ===== */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(28, 28, 28, 0.95);
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
 }
 
+.nav-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+/* ===== HERO SECTION ===== */
+#home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/profile.jpeg'); /* Placeholder for your background */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero h1 { font-size: 4rem; margin: 0; color: #fff; }
 .btn {
+  display: inline-block;
+  margin-top: 20px;
   background: #4aa3f0;
   color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 /* ===== SECTIONS ===== */
 section {
-  padding: 60px 20px;
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  border-bottom: 2px solid #4aa3f0;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+/* ===== ABOUT ===== */
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  text-align: left;
+}
+
+.profile-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 5px solid #1c1c1c;
+}
+
+/* ===== SKILLS & PROJECTS GRID ===== */
+.skills-grid, .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skills-grid span {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #4aa3f0;
+}
+
+.project-card {
+  background: #1c1c1c;
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  background: #252525;
+}
+
+/* ===== ANIMATION CLASS ===== */
+section {
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-in-out;
-  text-align: center;
+  transform: translateY(30px);
+  transition: 0.8s ease-out;
 }
 
 section.visible {
@@ -33,114 +129,8 @@ section.visible {
   transform: translateY(0);
 }
 
-h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ===== NAVBAR ===== */
-nav {
-  position: fixed;
-  width: 100%;
-  background: #1c1c1c;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.nav-menu {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-menu li a {
-  color: #e0e0e0;
-  transition: color 0.3s;
-}
-
-.nav-menu li a:hover {
-  color: #4aa3f0;
-}
-
-/* ===== HOME ===== */
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3em;
-}
-
-.hero p {
-  font-size: 1.5em;
-  margin: 10px 0 20px 0;
-}
-
-/* ===== ABOUT (VERTICAL) ===== */
-.about-content {
-  display: block; /* removed flex */
-}
-
-.about-content img {
-  width: 150px;
-  border-radius: 50%;
-  margin: 20px 0;
-}
-
-.about {
-  max-width: 800px;
-  margin: auto;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about li {
-  margin: 10px 0;
-}
-
-/* ===== SKILLS (VERTICAL) ===== */
-.skills-container {
-  display: block; /* removed flex */
-}
-
-.skills-container span {
-  display: block;
-  background: #1c1c1c;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px auto;
-  max-width: 200px;
-}
-
-/* ===== PROJECTS (VERTICAL) ===== */
-.projects-container {
-  display: block; /* removed flex */
-}
-
-.project-card {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 300px;
-  margin: 15px auto;
-}
-
-/* ===== HOVER EFFECT ===== */
-.project-card:hover {
-  transform: translateY(-5px);
+/* Responsive */
+@media (max-width: 768px) {
+  .about-flex { flex-direction: column; text-align: center; }
+  .nav-menu { display: none; } /* Add a hamburger menu later */
 }
