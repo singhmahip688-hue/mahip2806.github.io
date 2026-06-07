@@ -147,3 +147,10 @@ section.visible {
   .about-flex { flex-direction: column; text-align: center; }
   .nav-menu { display: none; } /* Add a hamburger menu later */
 }
+.Resume-img {
+  width: 200px;
+  height: 100px;
+  max-width: 75%;
+  display: block;
+  margin-bottom: 5px;
+}   
