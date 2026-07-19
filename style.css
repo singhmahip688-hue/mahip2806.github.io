@@ -17,6 +17,13 @@ nav {
   top: 0;
   z-index: 1000;
   padding: 15px 0;
+  transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+nav.scrolled {
+  padding: 8px 0;
+  background: rgba(15, 15, 15, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 .nav-container {
   max-width: 1100px;
@@ -26,11 +33,75 @@ nav {
   align-items: center;
   padding: 0 20px;
 }
+.nav-logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.25s ease;
+}
+.nav-logo:hover {
+  color: #4aa3f0;
+}
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 25px;
   margin: 0;
+}
+.nav-menu a {
+  position: relative;
+  color: #e0e0e0;
+  padding: 4px 2px;
+  transition: color 0.25s ease;
+}
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #4aa3f0;
+  transition: width 0.25s ease;
+}
+.nav-menu a:hover,
+.nav-menu a.active-link {
+  color: #4aa3f0;
+}
+.nav-menu a:hover::after,
+.nav-menu a.active-link::after {
+  width: 100%;
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 19px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 /* ===== HERO SECTION ===== */
 #home {
@@ -285,7 +356,75 @@ section.visible {
 /* Responsive */
 @media (max-width: 768px) {
   .about-flex { flex-direction: column; text-align: center; }
-  .nav-menu { display: none; } /* Add a hamburger menu later */
+
+  .hamburger { display: flex; }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: #161616;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.35s ease;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+}
+
+/* ===== STAGGERED CARD REVEAL (skills / projects) ===== */
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.stagger-item.stagger-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #4aa3f0;
+  color: #0f0f0f;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, background 0.25s ease;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+#backToTop:hover {
+  background: #7cc0ff;
+}
+
+/* ===== PROJECT CARD TILT SUPPORT ===== */
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 /* Container to keep the image isolated from sections below */
 .resume-preview-container {
