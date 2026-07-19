@@ -1,7 +1,11 @@
 /* ===== GLOBAL ===== */
 * { box-sizing: border-box; }
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: 'Times New Roman', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #0f0f0f;
   color: #e0e0e0;
@@ -184,7 +188,7 @@ h2 {
 
 .study-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
 }
 
@@ -340,6 +344,9 @@ section.visible .study-category:nth-child(3) { transition-delay: 0.25s; }
   }
   .study-category {
     padding: 24px 20px 28px;
+  }
+  .study-wrapper {
+    grid-template-columns: 1fr;
   }
 }
 
