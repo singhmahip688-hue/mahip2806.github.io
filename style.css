@@ -1,6 +1,5 @@
 /* ===== GLOBAL ===== */
 * { box-sizing: border-box; }
-
 body {
   margin: 0;
   font-family: 'Times New Roman', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,9 +8,7 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
 }
-
 a { text-decoration: none; color: #4aa3f0; }
-
 /* ===== NAVBAR ===== */
 nav {
   position: fixed;
@@ -21,7 +18,6 @@ nav {
   z-index: 1000;
   padding: 15px 0;
 }
-
 .nav-container {
   max-width: 1100px;
   margin: auto;
@@ -30,14 +26,12 @@ nav {
   align-items: center;
   padding: 0 20px;
 }
-
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 25px;
   margin: 0;
 }
-
 /* ===== HERO SECTION ===== */
 #home {
   height: 100vh;
@@ -49,7 +43,6 @@ nav {
   background-position: center;
   text-align: center;
 }
-
 .hero h1 { font-size: 4rem; margin: 0; color: #fff; }
 .btn {
   display: inline-block;
@@ -60,21 +53,18 @@ nav {
   border-radius: 30px;
   font-weight: bold;
 }
-
 /* ===== SECTIONS ===== */
 section {
   padding: 100px 20px;
   max-width: 1100px;
   margin: auto;
 }
-
 h2 {
   font-size: 2.5rem;
   border-bottom: 2px solid #4aa3f0;
   display: inline-block;
   margin-bottom: 50px;
 }
-
 /* ===== ABOUT ===== */
 .about-flex {
   display: flex;
@@ -82,7 +72,6 @@ h2 {
   gap: 50px;
   text-align: left;
 }
-
 .profile-img {
   width: 300px;
   height: 300px;
@@ -90,44 +79,197 @@ h2 {
   border-radius: 20px;
   border: 5px solid #1c1c1c;
 }
-
 /* ===== SKILLS & PROJECTS GRID ===== */
 .skills-grid, .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
 .skills-grid span {
   background: #1c1c1c;
   padding: 20px;
   border-radius: 10px;
   border-left: 4px solid #4aa3f0;
 }
-
 .project-card {
   background: #1c1c1c;
   padding: 30px;
   border-radius: 15px;
   transition: 0.3s;
 }
-
 .project-card:hover {
   transform: translateY(-10px);
   background: #252525;
 }
+/* ============================================
+   STUDY MATERIALS SECTION — matches existing theme
+   (replace your old .timeline / .timeline-item rules
+   with this whole block)
+   ============================================ */
 
-/* ===== STUDY MATERIALS / TIMELINE ===== */
-.timeline {
-  display: flex;
-  justify-content: space-between; 
-  gap: 40px; 
-  flex-wrap: wrap; 
+#Study-Materials {
+  padding-top: 100px;
 }
 
-.timeline-item {
-  flex: 1; 
-  min-width: 300px; 
+.study-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.study-category {
+  background: #1c1c1c;
+  border-radius: 15px;
+  padding: 30px 28px 34px;
+  position: relative;
+  overflow: hidden;
+  border-left: 4px solid #4aa3f0;
+  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+.study-category::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
+  background: radial-gradient(circle, rgba(74, 163, 240, 0.12) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.study-category:hover {
+  transform: translateY(-10px);
+  background: #232323;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.study-category:hover::before {
+  opacity: 1;
+}
+
+.study-icon {
+  font-size: 1.6rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.study-heading {
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: center;
+}
+
+.study-count {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #4aa3f0;
+  background: rgba(74, 163, 240, 0.1);
+  border: 1px solid rgba(74, 163, 240, 0.35);
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-bottom: 22px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px 14px;
+}
+
+.note-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  color: #cfcfcf;
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 10px 12px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: noteFadeIn 0.5s ease forwards;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.note-link::before {
+  content: "📄";
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: transform 0.25s ease;
+}
+
+.note-link:hover {
+  background: #4aa3f0;
+  color: #0f0f0f;
+  border-color: #4aa3f0;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(74, 163, 240, 0.35);
+}
+
+.note-link:hover::before {
+  transform: scale(1.15) rotate(-6deg);
+}
+
+/* Staggered entrance for each link inside a card */
+.notes-grid .note-link:nth-child(1)  { animation-delay: 0.03s; }
+.notes-grid .note-link:nth-child(2)  { animation-delay: 0.06s; }
+.notes-grid .note-link:nth-child(3)  { animation-delay: 0.09s; }
+.notes-grid .note-link:nth-child(4)  { animation-delay: 0.12s; }
+.notes-grid .note-link:nth-child(5)  { animation-delay: 0.15s; }
+.notes-grid .note-link:nth-child(6)  { animation-delay: 0.18s; }
+.notes-grid .note-link:nth-child(7)  { animation-delay: 0.21s; }
+.notes-grid .note-link:nth-child(8)  { animation-delay: 0.24s; }
+.notes-grid .note-link:nth-child(9)  { animation-delay: 0.27s; }
+.notes-grid .note-link:nth-child(10) { animation-delay: 0.30s; }
+.notes-grid .note-link:nth-child(11) { animation-delay: 0.33s; }
+.notes-grid .note-link:nth-child(12) { animation-delay: 0.36s; }
+.notes-grid .note-link:nth-child(13) { animation-delay: 0.39s; }
+.notes-grid .note-link:nth-child(14) { animation-delay: 0.42s; }
+.notes-grid .note-link:nth-child(15) { animation-delay: 0.45s; }
+.notes-grid .note-link:nth-child(16) { animation-delay: 0.48s; }
+.notes-grid .note-link:nth-child(17) { animation-delay: 0.51s; }
+.notes-grid .note-link:nth-child(18) { animation-delay: 0.54s; }
+.notes-grid .note-link:nth-child(19) { animation-delay: 0.57s; }
+.notes-grid .note-link:nth-child(20) { animation-delay: 0.60s; }
+
+@keyframes noteFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger the three cards themselves too, using your existing
+   section.visible fade-in scroll animation as the trigger */
+section.visible .study-category:nth-child(1) { transition-delay: 0.05s; }
+section.visible .study-category:nth-child(2) { transition-delay: 0.15s; }
+section.visible .study-category:nth-child(3) { transition-delay: 0.25s; }
+
+/* Responsive: 2 columns on tablets, 1 column on phones */
+@media (max-width: 900px) {
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+  .study-category {
+    padding: 24px 20px 28px;
+  }
 }
 
 /* ===== ANIMATION CLASS ===== */
@@ -136,12 +278,10 @@ section {
   transform: translateY(30px);
   transition: 0.8s ease-out;
 }
-
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-
 /* Responsive */
 @media (max-width: 768px) {
   .about-flex { flex-direction: column; text-align: center; }
@@ -156,14 +296,12 @@ section.visible {
   border-radius: 8px; /* Optional: matches modern UI styles */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
-
 .Resume-img {
   width: 100%;
   height: 100%;
   object-fit: cover;  /* Keeps the aspect ratio intact without stretching */
   display: block;
 }
-
 /* Optional: Style your download button so it looks sharp and distinct */
 .download-btn {
   display: inline-block;
@@ -175,7 +313,6 @@ section.visible {
   border-radius: 4px;
   transition: background-color 0.2s;
 }
-
 .download-btn:hover {
   background-color: #0056b3;
 }
