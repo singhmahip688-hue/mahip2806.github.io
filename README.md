@@ -1,20 +1,20 @@
-🌐 Mahip Singh Portfolio Website
+# 🌐 Mahip Singh Portfolio Website
 
-📌 About
+**📌 About**
 This repository contains the source code for my personal portfolio website, developed using HTML, CSS, and JavaScript. The website showcases my skills, projects, education, certifications, and contact information in a clean, modern, and responsive design.
 
-✨ Features
+**✨ Features**
 
 * 📱 Responsive and user-friendly interface
 * 🎨 Modern and attractive UI design
 * 👨‍💻 About Me section
 * 🛠️ Skills and Technologies
 * 📂 Projects showcase
-* 🎓 Education and Certifications
+* 🎓 Study Materials
 * 📞 Contact information
 * ⚡ Optimized for desktop and mobile devices
 
-🛠️ Technologies Used
+**🛠️ Technologies Used**
 
 * HTML5
 * CSS3
@@ -24,7 +24,7 @@ This repository contains the source code for my personal portfolio website, deve
 🚀 Live Website
 Portfolio: https://singhmahip688-hue.github.io/mahip2806.github.io/
 
-📂 Project Structure
+**📂 Project Structure**
 
 ```
 ├── index.html          # Main webpage
@@ -34,7 +34,7 @@ Portfolio: https://singhmahip688-hue.github.io/mahip2806.github.io/
 └── README.md
 ```
 
-🚀 Getting Started
+**🚀 Getting Started**
 
 1. Clone the repository:
 
@@ -50,7 +50,7 @@ cd mahip2806.github.io
 
 3. Open `index.html` in your browser.
 
-🔄 How I Add a New Case Study
+**🔄 How I Add a New Case Study**
 
 This portfolio isn't a one-time build — it's a living platform I update every time I ship new work. Here's my exact process:
 
@@ -66,16 +66,15 @@ This portfolio isn't a one-time build — it's a living platform I update every 
 4. Paste the generated HTML into `index.html`, replacing a placeholder.
 5. Commit and push — GitHub Pages updates automatically.
 
-✅ Used successfully to add both **CricketVision AI** and **AI Code Reviewer** to this portfolio.
+✅ Used successfully to add both **CricketVision AI: Automated Talent Identification & Biomechanics AnalysisI** and **CodeAudit AI– Intelligent Static Code Analysis & Repository Review Platform** to this portfolio.
 
-📌 Next case study planned: 🔲 *[name your next project here]*
+📌 Next case study planned: 🔲 *[Project - 3]*
 
-📧 Contact
+**📧 Contact**
 Mahip Singh
 
 * GitHub: https://github.com/singhmahip688-hue
 * Email: singhmahip688@gmail.com
 
-📜 License
+**📜 License**
 This project is open-source and available under the MIT License.
-
