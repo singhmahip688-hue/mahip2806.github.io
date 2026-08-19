@@ -95,30 +95,77 @@
 
                 <ul>
                     <li>
-                        Developed an AI-powered cricket analytics platform using
-                        Streamlit and OpenCV to predict player talent from batting
-                        and bowling performance data.
+                        Built a cricket analysis web app where anyone can upload a photo, video, 
+                        or a spreadsheet of player stats and instantly get useful insights back.
                     </li>
-
                     <li>
-                        Implemented Random Forest Regression models for player
-                        performance prediction, capability ranking, and talent
-                        identification.
+                        Used Streamlit to turn the whole project into a simple website with 
+                        tabs, buttons, and charts — no coding knowledge needed to use it.
                     </li>
-
                     <li>
-                        Engineered a computer vision pipeline using MediaPipe
-                        pose estimation for biomechanics and kinematic analysis.
+                        Created a "Talent Scout" feature where you upload a CSV file of player 
+                        stats (like runs, wickets, strike rate) and the app automatically 
+                        figures out who the top performers are.
                     </li>
-
                     <li>
-                        Extracted key performance metrics including elbow and knee
-                        flexion angles, stance width, and shoulder alignment.
+                        Used a machine learning model called Random Forest to predict a 
+                        "talent score" for each player based on their past performance numbers.
                     </li>
-
                     <li>
-                        Built an interactive analytics dashboard with
-                        visualizations, performance insights, and dynamic feedback.
+                        Added smart column detection so the app understands different spreadsheet 
+                        formats — for example, it recognizes "runs", "Runs", or "total_runs" 
+                        as the same thing.
+                    </li>
+                    <li>
+                        Automatically checks whether the dataset is about batting, bowling, or 
+                        both, and adjusts the scoring method accordingly.
+                    </li>
+                    <li>
+                        Built a Player vs Player comparison tool where users pick any two 
+                        players and see their stats side-by-side in a table and a bar chart.
+                    </li>
+                    <li>
+                        Added model accuracy checks (like R² score, error rates) so the app 
+                        can tell you if its predictions are reliable or if the model is 
+                        overfitting/underfitting.
+                    </li>
+                    <li>
+                        Created an "Image Analysis" feature that uses AI-based pose detection 
+                        (MediaPipe) to study a cricketer's photo and measure their body posture.
+                    </li>
+                    <li>
+                        Measured key body angles such as elbow bend, knee bend, shoulder 
+                        alignment, and stance width to judge batting or bowling technique.
+                    </li>
+                    <li>
+                        Compared these measured angles to "ideal" values used by professional 
+                        players, and gave a score out of 100 based on how close the technique is.
+                    </li>
+                    <li>
+                        Built a "Video Analysis" feature that does the same body-posture 
+                        check but frame-by-frame across an entire video, not just one photo.
+                    </li>
+                    <li>
+                        Automatically picked the best-performing moments from the video 
+                        (top 30% of frames) to give a fair final score, ignoring bad or 
+                        blurry frames.
+                    </li>
+                    <li>
+                        Generated automatic, easy-to-read coaching feedback (like "improve 
+                        your balance" or "great technique") based on the final score.
+                    </li>
+                    <li>
+                        Added visual, color-coded performance reports (Elite, Good, Average, 
+                        Needs Improvement) so users can quickly understand results without 
+                        reading numbers.
+                    </li>
+                    <li>
+                        Used Plotly to create interactive charts and graphs, so users can 
+                        explore player rankings and comparisons visually.
+                    </li>
+                    <li>
+                        Designed the whole app to work for both batting and bowling analysis, 
+                        making it useful for many types of cricket players.
                     </li>
                 </ul>
 
@@ -247,14 +294,14 @@
             <div class="project-image-container">
 
                 <a
-                    href="Images/project2.png"
+                    href="Images/Ai_CodeAudit_Demo.png"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="project-image-link"
                     title="Click to open full-size project image">
 
                     <img
-                        src="Images/project2.png"
+                        src="Images/Ai_CodeAudit_Demo.png"
                         alt="CodeAudit AI Project Screenshot"
                         class="project-image">
 
