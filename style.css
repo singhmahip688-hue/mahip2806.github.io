@@ -14,18 +14,9 @@ html {
 body {
   margin: 0;
   overflow-x: hidden;
-
-  font-family:
-    'Times New Roman',
-    'Segoe UI',
-    Tahoma,
-    Geneva,
-    Verdana,
-    sans-serif;
-
+  font-family: "Times New Roman", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: #0f0f0f;
   color: #e0e0e0;
-
   line-height: 1.6;
 }
 
@@ -187,7 +178,7 @@ nav.scrolled {
 
 
 /* =========================================================
-   HERO
+   HERO SECTION
    ========================================================= */
 
 #home {
@@ -202,7 +193,7 @@ nav.scrolled {
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.7)
     ),
-    url('Images/profile.jpeg');
+    url("Images/profile.jpeg");
 
   background-size: cover;
   background-position: center;
@@ -212,9 +203,7 @@ nav.scrolled {
 
 .hero h1 {
   font-size: 4rem;
-
   margin: 0;
-
   color: #fff;
 }
 
@@ -224,7 +213,6 @@ nav.scrolled {
   margin-top: 20px;
 
   background: #4aa3f0;
-
   color: #fff;
 
   padding: 12px 30px;
@@ -232,20 +220,6 @@ nav.scrolled {
   border-radius: 30px;
 
   font-weight: bold;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-
-  background: #62b2fa;
-
-  box-shadow:
-    0 8px 20px rgba(74, 163, 240, 0.3);
 }
 
 
@@ -264,14 +238,11 @@ section {
 
   transform: translateY(30px);
 
-  transition:
-    opacity 0.8s ease-out,
-    transform 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 section.visible {
   opacity: 1;
-
   transform: translateY(0);
 }
 
@@ -281,8 +252,6 @@ h2 {
   border-bottom: 2px solid #4aa3f0;
 
   display: inline-block;
-
-  margin-top: 0;
 
   margin-bottom: 50px;
 }
@@ -304,7 +273,6 @@ h2 {
 
 .profile-img {
   width: 300px;
-
   height: 300px;
 
   object-fit: cover;
@@ -336,20 +304,6 @@ h2 {
   border-radius: 10px;
 
   border-left: 4px solid #4aa3f0;
-
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.skills-grid span:hover {
-  transform: translateY(-6px);
-
-  background: #252525;
-
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -383,6 +337,8 @@ h2 {
     box-shadow 0.3s ease;
 
   transform-style: preserve-3d;
+
+  will-change: transform;
 }
 
 .project-card:hover {
@@ -396,17 +352,29 @@ h2 {
 
 
 /* =========================================================
-   PROJECT LAYOUT
+   FEATURED PROJECT LAYOUT
    ========================================================= */
+
+/*
+   IMPORTANT:
+
+   The project card uses flexbox.
+
+   The content determines the HEIGHT of the card.
+
+   The image automatically stretches to exactly
+   the same height as the content.
+
+   No fixed height.
+   No min-height.
+   No artificial 420px height.
+*/
 
 .project-card-featured {
   display: flex;
 
-  /*
-     IMPORTANT:
-     Both sides automatically receive the
-     same height based on the content.
-  */
+  flex-direction: row;
+
   align-items: stretch;
 
   gap: 35px;
@@ -420,15 +388,15 @@ h2 {
    ========================================================= */
 
 .project-content {
-  flex: 1;
+  flex: 1 1 50%;
 
   min-width: 0;
 
   /*
      IMPORTANT:
-     Do NOT use justify-content: center.
-     Content must start from the top.
+     Content starts from the TOP.
   */
+
   display: block;
 
   align-self: stretch;
@@ -436,28 +404,23 @@ h2 {
 
 .project-content h3 {
   margin-top: 0;
-
   margin-bottom: 12px;
-
-  color: #fff;
 }
 
 .project-content p {
   margin-top: 0;
-
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .project-content ul {
   margin-top: 10px;
-
   margin-bottom: 15px;
 
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 .project-content li {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 
@@ -465,18 +428,20 @@ h2 {
    PROJECT IMAGE CONTAINER
    ========================================================= */
 
-.project-image-container {
-  /*
-     Image takes half of available width.
-  */
-  flex: 0 0 50%;
+/*
+   IMPORTANT:
 
-  /*
-     NO fixed height.
-     The container gets its height from
-     the project content.
-  */
-  min-height: 0;
+   No fixed height here.
+
+   Because the parent uses align-items: stretch,
+   this container automatically becomes exactly
+   the same height as the project content.
+*/
+
+.project-image-container {
+  flex: 1 1 50%;
+
+  min-width: 0;
 
   display: flex;
 
@@ -489,14 +454,13 @@ h2 {
 
 
 /* =========================================================
-   PROJECT IMAGE LINK
+   CLICKABLE PROJECT IMAGE
    ========================================================= */
 
 .project-image-link {
   display: block;
 
   width: 100%;
-
   height: 100%;
 
   cursor: pointer;
@@ -511,17 +475,23 @@ h2 {
    PROJECT IMAGE
    ========================================================= */
 
+/*
+   The image fills EXACTLY the same height as
+   the content.
+
+   object-fit: cover makes the image fill the
+   complete available area without leaving gaps.
+*/
+
 .project-image {
   display: block;
 
   width: 100%;
-
   height: 100%;
 
-  /*
-     Image fills exactly the same height
-     as the project content.
-  */
+  min-width: 0;
+  min-height: 0;
+
   object-fit: cover;
 
   object-position: center;
@@ -538,31 +508,16 @@ h2 {
 
 
 /* =========================================================
-   PROJECT IMAGE HOVER
+   IMAGE HOVER
    ========================================================= */
 
 .project-image-link:hover .project-image {
-  transform: scale(1.04);
+  transform: scale(1.03);
 
   filter: brightness(1.08);
 
   box-shadow:
     0 12px 35px rgba(0, 0, 0, 0.55);
-}
-
-
-/* =========================================================
-   PROJECT IMAGE HINT
-   ========================================================= */
-
-.project-image-hint {
-  margin-top: 8px;
-
-  font-size: 0.8rem;
-
-  color: #999;
-
-  text-align: center;
 }
 
 
@@ -582,6 +537,21 @@ h2 {
 
 .project-links a {
   display: inline-block;
+}
+
+
+/* =========================================================
+   IMAGE CLICK HINT
+   ========================================================= */
+
+.project-image-hint {
+  margin-top: 8px;
+
+  font-size: 0.8rem;
+
+  color: #999;
+
+  text-align: center;
 }
 
 
@@ -627,11 +597,9 @@ h2 {
   position: absolute;
 
   top: -60%;
-
   left: -60%;
 
   width: 220%;
-
   height: 220%;
 
   background:
@@ -873,7 +841,6 @@ h2 {
 }
 
 @keyframes noteFadeIn {
-
   to {
     opacity: 1;
 
@@ -928,11 +895,9 @@ section.visible .study-category:nth-child(3) {
   position: fixed;
 
   bottom: 30px;
-
   right: 30px;
 
   width: 46px;
-
   height: 46px;
 
   border-radius: 50%;
@@ -986,7 +951,6 @@ section.visible .study-category:nth-child(3) {
 
 .resume-preview-container {
   width: 150px;
-
   height: 180px;
 
   margin: 15px auto;
@@ -1001,7 +965,6 @@ section.visible .study-category:nth-child(3) {
 
 .Resume-img {
   width: 100%;
-
   height: 100%;
 
   object-fit: cover;
@@ -1030,14 +993,11 @@ section.visible .study-category:nth-child(3) {
   border-radius: 4px;
 
   transition:
-    background-color 0.2s,
-    transform 0.2s ease;
+    background-color 0.2s;
 }
 
 .download-btn:hover {
   background-color: #0056b3;
-
-  transform: translateY(-2px);
 }
 
 
@@ -1052,12 +1012,18 @@ section.visible .study-category:nth-child(3) {
       repeat(2, 1fr);
   }
 
+  /*
+     Slightly more balanced project proportions
+     on tablets.
+  */
+
   .project-card-featured {
     gap: 25px;
   }
 
+  .project-content,
   .project-image-container {
-    flex: 0 0 45%;
+    flex-basis: 50%;
   }
 }
 
@@ -1082,7 +1048,6 @@ section.visible .study-category:nth-child(3) {
     position: fixed;
 
     top: 0;
-
     right: -100%;
 
     height: 100vh;
@@ -1101,7 +1066,8 @@ section.visible .study-category:nth-child(3) {
 
     gap: 30px;
 
-    transition: right 0.35s ease;
+    transition:
+      right 0.35s ease;
 
     box-shadow:
       -10px 0 30px rgba(0, 0, 0, 0.5);
@@ -1116,6 +1082,10 @@ section.visible .study-category:nth-child(3) {
      MOBILE PROJECT
      ======================================================= */
 
+  .projects-grid {
+    gap: 25px;
+  }
+
   .project-card {
     padding: 22px;
   }
@@ -1123,28 +1093,49 @@ section.visible .study-category:nth-child(3) {
   .project-card-featured {
     flex-direction: column;
 
-    align-items: stretch;
-
     gap: 25px;
+
+    align-items: stretch;
   }
+
+
+  /*
+     On mobile, content determines its own height.
+     Image comes after the content.
+  */
+
+  .project-content {
+    width: 100%;
+
+    flex: none;
+
+    display: block;
+  }
+
 
   .project-image-container {
     width: 100%;
 
     flex: none;
 
-    min-height: 0;
-
     height: auto;
 
-    order: -1;
+    min-height: 0;
+
+    order: 2;
+
+    overflow: hidden;
   }
+
 
   .project-image-link {
     width: 100%;
 
     height: auto;
+
+    display: block;
   }
+
 
   .project-image {
     width: 100%;
@@ -1153,13 +1144,16 @@ section.visible .study-category:nth-child(3) {
 
     min-height: 0;
 
+    max-height: none;
+
     object-fit: contain;
+
+    display: block;
   }
 
-  .project-content {
-    width: 100%;
 
-    align-self: auto;
+  .project-image-hint {
+    margin-bottom: 0;
   }
 }
 
@@ -1170,27 +1164,12 @@ section.visible .study-category:nth-child(3) {
 
 @media (max-width: 480px) {
 
-  section {
-    padding: 80px 15px;
-  }
-
-  .hero h1 {
-    font-size: 2.6rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-
-    margin-bottom: 35px;
-  }
-
   .notes-grid {
     grid-template-columns: 1fr;
   }
 
   .study-category {
-    padding:
-      24px 20px 28px;
+    padding: 24px 20px 28px;
   }
 
   .study-wrapper {
@@ -1217,25 +1196,5 @@ section.visible .study-category:nth-child(3) {
 
   .project-content h3 {
     font-size: 1.25rem;
-  }
-
-  .project-links {
-    flex-direction: column;
-  }
-
-  .project-links a {
-    width: 100%;
-
-    text-align: center;
-  }
-
-  #backToTop {
-    width: 42px;
-
-    height: 42px;
-
-    right: 18px;
-
-    bottom: 18px;
   }
 }
