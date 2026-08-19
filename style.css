@@ -1,8 +1,13 @@
 /* ===== GLOBAL ===== */
-* { box-sizing: border-box; }
+
+* {
+  box-sizing: border-box;
+}
+
 html {
   overflow-x: hidden;
 }
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -12,8 +17,15 @@ body {
   scroll-behavior: smooth;
   line-height: 1.6;
 }
-a { text-decoration: none; color: #4aa3f0; }
+
+a {
+  text-decoration: none;
+  color: #4aa3f0;
+}
+
+
 /* ===== NAVBAR ===== */
+
 nav {
   position: fixed;
   width: 100%;
@@ -23,12 +35,14 @@ nav {
   padding: 15px 0;
   transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
+
 nav.scrolled {
   padding: 8px 0;
   background: rgba(15, 15, 15, 0.92);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
+
 .nav-container {
   max-width: 1100px;
   margin: auto;
@@ -37,27 +51,32 @@ nav.scrolled {
   align-items: center;
   padding: 0 20px;
 }
+
 .nav-logo {
   font-weight: bold;
   font-size: 1.2rem;
   color: #fff;
   transition: color 0.25s ease;
 }
+
 .nav-logo:hover {
   color: #4aa3f0;
 }
+
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 25px;
   margin: 0;
 }
+
 .nav-menu a {
   position: relative;
   color: #e0e0e0;
   padding: 4px 2px;
   transition: color 0.25s ease;
 }
+
 .nav-menu a::after {
   content: "";
   position: absolute;
@@ -68,16 +87,20 @@ nav.scrolled {
   background: #4aa3f0;
   transition: width 0.25s ease;
 }
+
 .nav-menu a:hover,
 .nav-menu a.active-link {
   color: #4aa3f0;
 }
+
 .nav-menu a:hover::after,
 .nav-menu a.active-link::after {
   width: 100%;
 }
 
-/* Hamburger button (hidden on desktop) */
+
+/* ===== HAMBURGER BUTTON ===== */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -90,6 +113,7 @@ nav.scrolled {
   padding: 0;
   z-index: 1100;
 }
+
 .hamburger span {
   display: block;
   width: 100%;
@@ -98,27 +122,41 @@ nav.scrolled {
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
+
+
 /* ===== HERO SECTION ===== */
+
 #home {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('Images/profile.jpeg'); /* Placeholder for your background */
+  background:
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('Images/profile.jpeg');
   background-size: cover;
   background-position: center;
   text-align: center;
 }
-.hero h1 { font-size: 4rem; margin: 0; color: #fff; }
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+}
+
 .btn {
   display: inline-block;
   margin-top: 20px;
@@ -128,25 +166,33 @@ nav.scrolled {
   border-radius: 30px;
   font-weight: bold;
 }
+
+
 /* ===== SECTIONS ===== */
+
 section {
   padding: 100px 20px;
   max-width: 1100px;
   margin: auto;
 }
+
 h2 {
   font-size: 2.5rem;
   border-bottom: 2px solid #4aa3f0;
   display: inline-block;
   margin-bottom: 50px;
 }
+
+
 /* ===== ABOUT ===== */
+
 .about-flex {
   display: flex;
   align-items: center;
   gap: 50px;
   text-align: left;
 }
+
 .profile-img {
   width: 300px;
   height: 300px;
@@ -154,32 +200,90 @@ h2 {
   border-radius: 20px;
   border: 5px solid #1c1c1c;
 }
-/* ===== SKILLS & PROJECTS GRID ===== */
-.skills-grid, .projects-grid {
+
+
+/* ===== SKILLS ===== */
+
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
+
 .skills-grid span {
   background: #1c1c1c;
   padding: 20px;
   border-radius: 10px;
   border-left: 4px solid #4aa3f0;
 }
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
 .project-card {
   background: #1c1c1c;
   padding: 30px;
   border-radius: 15px;
   transition: 0.3s;
 }
+
 .project-card:hover {
   transform: translateY(-10px);
   background: #252525;
 }
+
+
+/* ===== FEATURED PROJECT - CRICKETVISION AI ===== */
+
+.project-card-featured {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  overflow: hidden;
+}
+
+.project-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-image-container {
+  flex: 0 0 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.project-links {
+  margin-top: 20px;
+}
+
+
 /* ============================================
-   STUDY MATERIALS SECTION — matches existing theme
-   (replace your old .timeline / .timeline-item rules
-   with this whole block)
+   STUDY MATERIALS SECTION
    ============================================ */
 
 #Study-Materials {
@@ -199,7 +303,10 @@ h2 {
   position: relative;
   overflow: hidden;
   border-left: 4px solid #4aa3f0;
-  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
 }
 
 .study-category::before {
@@ -209,7 +316,12 @@ h2 {
   left: -60%;
   width: 220%;
   height: 220%;
-  background: radial-gradient(circle, rgba(74, 163, 240, 0.12) 0%, transparent 60%);
+  background:
+    radial-gradient(
+      circle,
+      rgba(74, 163, 240, 0.12) 0%,
+      transparent 60%
+    );
   opacity: 0;
   transition: opacity 0.4s ease;
   pointer-events: none;
@@ -272,8 +384,12 @@ h2 {
   opacity: 0;
   transform: translateY(14px);
   animation: noteFadeIn 0.5s ease forwards;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
-    transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .note-link::before {
@@ -296,27 +412,88 @@ h2 {
   transform: scale(1.15) rotate(-6deg);
 }
 
-/* Staggered entrance for each link inside a card */
-.notes-grid .note-link:nth-child(1)  { animation-delay: 0.03s; }
-.notes-grid .note-link:nth-child(2)  { animation-delay: 0.06s; }
-.notes-grid .note-link:nth-child(3)  { animation-delay: 0.09s; }
-.notes-grid .note-link:nth-child(4)  { animation-delay: 0.12s; }
-.notes-grid .note-link:nth-child(5)  { animation-delay: 0.15s; }
-.notes-grid .note-link:nth-child(6)  { animation-delay: 0.18s; }
-.notes-grid .note-link:nth-child(7)  { animation-delay: 0.21s; }
-.notes-grid .note-link:nth-child(8)  { animation-delay: 0.24s; }
-.notes-grid .note-link:nth-child(9)  { animation-delay: 0.27s; }
-.notes-grid .note-link:nth-child(10) { animation-delay: 0.30s; }
-.notes-grid .note-link:nth-child(11) { animation-delay: 0.33s; }
-.notes-grid .note-link:nth-child(12) { animation-delay: 0.36s; }
-.notes-grid .note-link:nth-child(13) { animation-delay: 0.39s; }
-.notes-grid .note-link:nth-child(14) { animation-delay: 0.42s; }
-.notes-grid .note-link:nth-child(15) { animation-delay: 0.45s; }
-.notes-grid .note-link:nth-child(16) { animation-delay: 0.48s; }
-.notes-grid .note-link:nth-child(17) { animation-delay: 0.51s; }
-.notes-grid .note-link:nth-child(18) { animation-delay: 0.54s; }
-.notes-grid .note-link:nth-child(19) { animation-delay: 0.57s; }
-.notes-grid .note-link:nth-child(20) { animation-delay: 0.60s; }
+
+/* ===== STAGGERED NOTE ANIMATION ===== */
+
+.notes-grid .note-link:nth-child(1) {
+  animation-delay: 0.03s;
+}
+
+.notes-grid .note-link:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.notes-grid .note-link:nth-child(3) {
+  animation-delay: 0.09s;
+}
+
+.notes-grid .note-link:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+.notes-grid .note-link:nth-child(5) {
+  animation-delay: 0.15s;
+}
+
+.notes-grid .note-link:nth-child(6) {
+  animation-delay: 0.18s;
+}
+
+.notes-grid .note-link:nth-child(7) {
+  animation-delay: 0.21s;
+}
+
+.notes-grid .note-link:nth-child(8) {
+  animation-delay: 0.24s;
+}
+
+.notes-grid .note-link:nth-child(9) {
+  animation-delay: 0.27s;
+}
+
+.notes-grid .note-link:nth-child(10) {
+  animation-delay: 0.30s;
+}
+
+.notes-grid .note-link:nth-child(11) {
+  animation-delay: 0.33s;
+}
+
+.notes-grid .note-link:nth-child(12) {
+  animation-delay: 0.36s;
+}
+
+.notes-grid .note-link:nth-child(13) {
+  animation-delay: 0.39s;
+}
+
+.notes-grid .note-link:nth-child(14) {
+  animation-delay: 0.42s;
+}
+
+.notes-grid .note-link:nth-child(15) {
+  animation-delay: 0.45s;
+}
+
+.notes-grid .note-link:nth-child(16) {
+  animation-delay: 0.48s;
+}
+
+.notes-grid .note-link:nth-child(17) {
+  animation-delay: 0.51s;
+}
+
+.notes-grid .note-link:nth-child(18) {
+  animation-delay: 0.54s;
+}
+
+.notes-grid .note-link:nth-child(19) {
+  animation-delay: 0.57s;
+}
+
+.notes-grid .note-link:nth-child(20) {
+  animation-delay: 0.60s;
+}
 
 @keyframes noteFadeIn {
   to {
@@ -325,46 +502,162 @@ h2 {
   }
 }
 
-/* Stagger the three cards themselves too, using your existing
-   section.visible fade-in scroll animation as the trigger */
-section.visible .study-category:nth-child(1) { transition-delay: 0.05s; }
-section.visible .study-category:nth-child(2) { transition-delay: 0.15s; }
-section.visible .study-category:nth-child(3) { transition-delay: 0.25s; }
 
-/* Responsive: 2 columns on tablets, 1 column on phones */
-@media (max-width: 900px) {
-  .notes-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* ===== STUDY CARD STAGGER ===== */
+
+section.visible .study-category:nth-child(1) {
+  transition-delay: 0.05s;
 }
 
-@media (max-width: 480px) {
-  .notes-grid {
-    grid-template-columns: 1fr;
-  }
-  .study-category {
-    padding: 24px 20px 28px;
-  }
-  .study-wrapper {
-    grid-template-columns: 1fr;
-  }
+section.visible .study-category:nth-child(2) {
+  transition-delay: 0.15s;
 }
 
-/* ===== ANIMATION CLASS ===== */
+section.visible .study-category:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+
+/* ===== SECTION ANIMATION ===== */
+
 section {
   opacity: 0;
   transform: translateY(30px);
   transition: 0.8s ease-out;
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
-/* Responsive */
-@media (max-width: 768px) {
-  .about-flex { flex-direction: column; text-align: center; }
 
-  .hamburger { display: flex; }
+
+/* ===== STAGGERED CARD REVEAL ===== */
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.stagger-item.stagger-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===== BACK TO TOP BUTTON ===== */
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #4aa3f0;
+  color: #0f0f0f;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(15px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    visibility 0.3s,
+    background 0.25s ease;
+  z-index: 999;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#backToTop:hover {
+  background: #7cc0ff;
+}
+
+
+/* ===== PROJECT CARD TILT SUPPORT ===== */
+
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+
+/* ===== RESUME PREVIEW ===== */
+
+.resume-preview-container {
+  width: 150px;
+  height: 180px;
+  margin: 15px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.Resume-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ===== DOWNLOAD BUTTON ===== */
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .notes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .about-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 
   .nav-menu {
     position: fixed;
@@ -385,80 +678,44 @@ section.visible {
   .nav-menu.open {
     right: 0;
   }
+
+
+  /* ===== MOBILE FEATURED PROJECT ===== */
+
+  .project-card-featured {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-image-container {
+    flex: none;
+    width: 100%;
+    order: -1;
+  }
+
+  .project-image {
+    max-height: 350px;
+  }
+
 }
 
-/* ===== STAGGERED CARD REVEAL (skills / projects) ===== */
-.stagger-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-.stagger-item.stagger-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-/* ===== BACK TO TOP BUTTON ===== */
-#backToTop {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: none;
-  background: #4aa3f0;
-  color: #0f0f0f;
-  font-size: 1.3rem;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s, background 0.25s ease;
-  z-index: 999;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-}
-#backToTop.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-#backToTop:hover {
-  background: #7cc0ff;
-}
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+   ========================================================= */
 
-/* ===== PROJECT CARD TILT SUPPORT ===== */
-.project-card {
-  transform-style: preserve-3d;
-  will-change: transform;
-}
-/* Container to keep the image isolated from sections below */
-.resume-preview-container {
-  width: 150px;       /* Set a fixed thumbnail width */
-  height: 180px;      /* Set a reasonable height that fits a portrait aspect ratio */
-  margin: 15px auto;  /* Centers it and provides breathing room */
-  overflow: hidden;   /* Prevents any bleed-through */
-  border-radius: 8px; /* Optional: matches modern UI styles */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-.Resume-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Keeps the aspect ratio intact without stretching */
-  display: block;
-}
-/* Optional: Style your download button so it looks sharp and distinct */
-.download-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 8px 16px;
-  background-color: #007bff; /* Adjust color to fit your dark/colorful theme */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-.download-btn:hover {
-  background-color: #0056b3;
+@media (max-width: 480px) {
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .study-category {
+    padding: 24px 20px 28px;
+  }
+
+  .study-wrapper {
+    grid-template-columns: 1fr;
+  }
+
 }
