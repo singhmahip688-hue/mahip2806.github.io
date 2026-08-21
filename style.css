@@ -1198,3 +1198,308 @@ section.visible .study-category:nth-child(3) {
     font-size: 1.25rem;
   }
 }
+
+
+/* =========================================================
+   =========================================================
+   WORK EXPERIENCE & EDUCATION  (NEW SECTIONS)
+   =========================================================
+   ========================================================= */
+
+/* =========================================================
+   JOB HEADER / ROLE / DURATION / STATUS BADGE
+   ========================================================= */
+
+.project-content h3 .status-badge {
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.status-badge {
+  display: inline-block;
+
+  padding: 4px 12px;
+
+  border-radius: 20px;
+
+  font-size: 0.7rem;
+
+  font-weight: bold;
+
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+}
+
+.status-badge.ongoing {
+  background: rgba(74, 163, 240, 0.15);
+
+  color: #4aa3f0;
+
+  border: 1px solid rgba(74, 163, 240, 0.4);
+}
+
+.job-role {
+  font-size: 0.95rem;
+
+  color: #4aa3f0;
+
+  font-weight: bold;
+
+  margin: 4px 0;
+}
+
+.job-duration {
+  font-size: 0.85rem;
+
+  color: #999;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   CERTIFICATE / DOCUMENT PREVIEW STACK
+   ========================================================= */
+
+/*
+   Sits inside .project-image-container, the same way
+   a project screenshot does, but shows one or more
+   embedded PDF previews instead of a single image.
+*/
+
+.cert-stack {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+  width: 100%;
+
+  height: 100%;
+}
+
+.cert-item {
+  background: #141414;
+
+  border: 1px solid #2a2a2a;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex: 1 1 auto;
+
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.cert-item:hover {
+  border-color: #4aa3f0;
+
+  transform: translateY(-3px);
+}
+
+.cert-frame-wrap {
+  width: 100%;
+
+  height: 180px;
+
+  overflow: hidden;
+
+  background: #fff;
+}
+
+.cert-frame {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  display: block;
+}
+
+.cert-view-link {
+  display: block;
+
+  text-align: center;
+
+  padding: 8px 10px;
+
+  font-size: 0.8rem;
+
+  color: #4aa3f0;
+
+  background: #1c1c1c;
+
+  border-top: 1px solid #2a2a2a;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.cert-view-link:hover {
+  background: #4aa3f0;
+
+  color: #0f0f0f;
+}
+
+
+/* =========================================================
+   EDUCATION GRID & CARDS
+   ========================================================= */
+
+.education-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 25px;
+}
+
+.education-card {
+  background: #1c1c1c;
+
+  border-left: 4px solid #4aa3f0;
+
+  border-radius: 15px;
+
+  padding: 30px 28px 34px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+
+  background: #232323;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+.education-card h3 {
+  margin-top: 0;
+
+  margin-bottom: 12px;
+
+  color: #fff;
+
+  font-size: 1.3rem;
+}
+
+.edu-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px 25px;
+
+  margin: 0 0 18px;
+
+  font-size: 0.9rem;
+
+  color: #cfcfcf;
+}
+
+.edu-meta span strong {
+  color: #4aa3f0;
+}
+
+.education-card p {
+  margin: 0;
+
+  color: #cfcfcf;
+}
+
+.edu-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 15px;
+
+  font-size: 0.85rem;
+}
+
+.edu-table th,
+.edu-table td {
+  text-align: left;
+
+  padding: 8px 10px;
+
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.edu-table th {
+  color: #4aa3f0;
+
+  font-weight: 600;
+}
+
+.edu-table tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   WORK EXPERIENCE / EDUCATION — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .cert-frame-wrap {
+    height: 160px;
+  }
+}
+
+
+/* =========================================================
+   WORK EXPERIENCE / EDUCATION — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .cert-stack {
+    flex-direction: column;
+  }
+
+  .cert-frame-wrap {
+    height: 220px;
+  }
+
+  .edu-table {
+    font-size: 0.8rem;
+  }
+
+  .edu-table th,
+  .edu-table td {
+    padding: 6px 8px;
+  }
+}
+
+
+/* =========================================================
+   WORK EXPERIENCE / EDUCATION — SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .education-card {
+    padding: 24px 20px 28px;
+  }
+
+  .cert-frame-wrap {
+    height: 200px;
+  }
+}
