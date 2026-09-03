@@ -3,13 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mahip Singh | Portfolio</title>
+
+    <!-- Week 3 Identity Kit Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- MS Monogram Favicon -->
+    <link
+        rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23172554'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='38' font-weight='700' fill='%23F8FAFC'%3EMS%3C/text%3E%3C/svg%3E"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- =========================================================
+         NAVBAR
+         ========================================================= -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">Mahip Singh</a>
+
+            <a href="#home" class="nav-logo">
+                <span class="nav-monogram">MS</span>
+                <span>Mahip Singh</span>
+            </a>
+
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -20,171 +43,331 @@
                 <li><a href="#Study-Materials">Study Materials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+
+            <button
+                class="hamburger"
+                id="hamburger"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+
         </div>
     </nav>
 
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
     <header id="home">
         <div class="hero">
+
             <h1>Mahip Singh</h1>
+
             <p>Final Year IS Student | Machine Learning Developer</p>
-        
+
             <div class="resume-preview-container">
-                <iframe 
-                    src="Images/mahip_singh_resume.pdf" 
-                    title="Resume Preview" 
+                <iframe
+                    src="Images/mahip_singh_resume.pdf"
+                    title="Resume Preview"
                     class="Resume-pdf">
                 </iframe>
             </div>
-        
-            <a href="Images/mahip_singh_resume.pdf" download class="download-btn">Download Resume</a>   
+
+            <a
+                href="Images/mahip_singh_resume.pdf"
+                download
+                class="download-btn">
+                Download Resume
+            </a>
+
         </div>
     </header>
 
+
+    <!-- =========================================================
+         ABOUT
+         ========================================================= -->
     <section id="about">
+
         <h2>About Me</h2>
+
         <div class="about-flex">
-            <img src="Images/profile.jpeg" alt="Profile Image" class="profile-img">
+
+            <img
+                src="Images/profile.jpeg"
+                alt="Profile Image"
+                class="profile-img"
+            >
+
             <div class="about-text">
-                <h3>| Final Year IS Student | Software Developer | Data Scientist | AI & ML |</h3>
-                <p>Final-year Information Science Engineering student with practical experience in Software Development, Machine Learning, Deep Learning, and Computer Vision through hands-on projects. Familiar with Python, Java, SQL, OpenCV, Flask, and Streamlit, with an intermediate understanding of Data Structures & Algorithms and core computer science concepts. Passionate about building scalable applications, solving real-world problems, and continuously improving my technical expertise. Seeking opportunities as a Software Development Engineer (SDE), Data Scientist, Machine Learning Engineer, or AI Engineer to contribute, learn, and grow.</p>
+
+                <h3>
+                    | Final Year IS Student | Software Developer |
+                    Data Scientist | AI & ML |
+                </h3>
+
+                <p>
+                    Final-year Information Science Engineering student with
+                    practical experience in Software Development, Machine
+                    Learning, Deep Learning, and Computer Vision through
+                    hands-on projects. Familiar with Python, Java, SQL,
+                    OpenCV, Flask, and Streamlit, with an intermediate
+                    understanding of Data Structures & Algorithms and core
+                    computer science concepts. Passionate about building
+                    scalable applications, solving real-world problems,
+                    and continuously improving my technical expertise.
+                    Seeking opportunities as a Software Development Engineer
+                    (SDE), Data Scientist, Machine Learning Engineer, or AI
+                    Engineer to contribute, learn, and grow.
+                </p>
+
                 <div class="toolkit">
-                    <p><strong>Languages:</strong> Java, Python, Javascript, HTML, CSS</p>
-                    <p><strong>AI/ML:</strong> Scikit-learn, OpenCV, MediaPipe, Pandas, NumPy</p>
-                    <p><strong>Frameworks:</strong> Flask, Streamlit</p>
-                    <p><strong>Databases:</strong> MySQL, MongoDB</p>
-                    <p><strong>Core CS Subjects:</strong> Data Structures & Algorithms, OOP, DBMS, Operating Systems.</p>
-                    <p><strong>Tools:</strong> Git, GitHub, VsCode</p
+
+                    <p>
+                        <strong>Languages:</strong>
+                        Java, Python, Javascript, HTML, CSS
+                    </p>
+
+                    <p>
+                        <strong>AI/ML:</strong>
+                        Scikit-learn, OpenCV, MediaPipe, Pandas, NumPy
+                    </p>
+
+                    <p>
+                        <strong>Frameworks:</strong>
+                        Flask, Streamlit
+                    </p>
+
+                    <p>
+                        <strong>Databases:</strong>
+                        MySQL, MongoDB
+                    </p>
+
+                    <p>
+                        <strong>Core CS Subjects:</strong>
+                        Data Structures & Algorithms, OOP, DBMS,
+                        Operating Systems.
+                    </p>
+
+                    <p>
+                        <strong>Tools:</strong>
+                        Git, GitHub, VsCode
+                    </p>
+
                 </div>
+
             </div>
         </div>
+
     </section>
 
+
+    <!-- =========================================================
+         SKILLS
+         ========================================================= -->
     <section id="skills">
+
         <h2>Skills</h2>
+
         <div class="skills-grid">
-            <span>Artificial Intelligence</span><span>Machine Learning</span><span>Deep Learning</span><span>Computer Vision</span><span>DSA With JAVA</span><span>Java</span>
-            <span>Python</span><span>HTML</span><span>CSS</span><span>Javascript</span><span>DBMS</span><span>Git/Github</span>
+
+            <span>Artificial Intelligence</span>
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>Computer Vision</span>
+            <span>DSA With JAVA</span>
+            <span>Java</span>
+
+            <span>Python</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Javascript</span>
+            <span>DBMS</span>
+            <span>Git/Github</span>
+
         </div>
+
     </section>
+
+
+    <!-- =========================================================
+         PROJECTS
+         ========================================================= -->
     <section id="projects">
 
-    <h2>Projects</h2>
+        <h2>Projects</h2>
 
-    <div class="projects-grid">
+        <div class="projects-grid">
 
-        <!-- ================= PROJECT 1 ================= -->
 
-        <div class="project-card project-card-featured stagger-item">
+            <!-- ================= PROJECT 1 ================= -->
 
-            <!-- PROJECT DESCRIPTION -->
+            <div class="project-card project-card-featured stagger-item">
 
-            <div class="project-content">
+                <div class="project-content">
 
-                <h3>
-                    CricketVision AI: Automated Talent Identification & Biomechanics Analysis
-                </h3>
+                    <h3>
+                        CricketVision AI: Automated Talent Identification
+                        & Biomechanics Analysis
+                    </h3>
 
-                <p>
-                    <strong>Tech Used:</strong>
-                    Python, Streamlit, Scikit-Learn, OpenCV,
-                    MediaPipe, NumPy, Pandas, Plotly
-                </p>
+                    <p>
+                        <strong>Tech Used:</strong>
+                        Python, Streamlit, Scikit-Learn, OpenCV,
+                        MediaPipe, NumPy, Pandas, Plotly
+                    </p>
 
-                <ul>
-                    <li>
-                        Built a cricket analysis web app where anyone can upload a photo, video, 
-                        or a spreadsheet of player stats and instantly get useful insights back.
-                    </li>
-                    <li>
-                        Used Streamlit to turn the whole project into a simple website with 
-                        tabs, buttons, and charts — no coding knowledge needed to use it.
-                    </li>
-                    <li>
-                        Created a "Talent Scout" feature where you upload a CSV file of player 
-                        stats (like runs, wickets, strike rate) and the app automatically 
-                        figures out who the top performers are.
-                    </li>
-                    <li>
-                        Used a machine learning model called Random Forest to predict a 
-                        "talent score" for each player based on their past performance numbers.
-                    </li>
-                    <li>
-                        Added smart column detection so the app understands different spreadsheet 
-                        formats — for example, it recognizes "runs", "Runs", or "total_runs" 
-                        as the same thing.
-                    </li>
-                    <li>
-                        Automatically checks whether the dataset is about batting, bowling, or 
-                        both, and adjusts the scoring method accordingly.
-                    </li>
-                    <li>
-                        Built a Player vs Player comparison tool where users pick any two 
-                        players and see their stats side-by-side in a table and a bar chart.
-                    </li>
-                    <li>
-                        Added model accuracy checks (like R² score, error rates) so the app 
-                        can tell you if its predictions are reliable or if the model is 
-                        overfitting/underfitting.
-                    </li>
-                    <li>
-                        Created an "Image Analysis" feature that uses AI-based pose detection 
-                        (MediaPipe) to study a cricketer's photo and measure their body posture.
-                    </li>
-                    <li>
-                        Measured key body angles such as elbow bend, knee bend, shoulder 
-                        alignment, and stance width to judge batting or bowling technique.
-                    </li>
-                    <li>
-                        Compared these measured angles to "ideal" values used by professional 
-                        players, and gave a score out of 100 based on how close the technique is.
-                    </li>
-                    <li>
-                        Built a "Video Analysis" feature that does the same body-posture 
-                        check but frame-by-frame across an entire video, not just one photo.
-                    </li>
-                    <li>
-                        Automatically picked the best-performing moments from the video 
-                        (top 30% of frames) to give a fair final score, ignoring bad or 
-                        blurry frames.
-                    </li>
-                    <li>
-                        Generated automatic, easy-to-read coaching feedback (like "improve 
-                        your balance" or "great technique") based on the final score.
-                    </li>
-                    <li>
-                        Added visual, color-coded performance reports (Elite, Good, Average, 
-                        Needs Improvement) so users can quickly understand results without 
-                        reading numbers.
-                    </li>
-                    <li>
-                        Used Plotly to create interactive charts and graphs, so users can 
-                        explore player rankings and comparisons visually.
-                    </li>
-                    <li>
-                        Designed the whole app to work for both batting and bowling analysis, 
-                        making it useful for many types of cricket players.
-                    </li>
-                </ul>
+                    <ul>
 
-                <div class="project-links">
+                        <li>
+                            Built a cricket analysis web app where anyone can
+                            upload a photo, video, or a spreadsheet of player
+                            stats and instantly get useful insights back.
+                        </li>
+
+                        <li>
+                            Used Streamlit to turn the whole project into a
+                            simple website with tabs, buttons, and charts —
+                            no coding knowledge needed to use it.
+                        </li>
+
+                        <li>
+                            Created a "Talent Scout" feature where you upload
+                            a CSV file of player stats (like runs, wickets,
+                            strike rate) and the app automatically figures
+                            out who the top performers are.
+                        </li>
+
+                        <li>
+                            Used a machine learning model called Random Forest
+                            to predict a "talent score" for each player based
+                            on their past performance numbers.
+                        </li>
+
+                        <li>
+                            Added smart column detection so the app understands
+                            different spreadsheet formats — for example,
+                            it recognizes "runs", "Runs", or "total_runs"
+                            as the same thing.
+                        </li>
+
+                        <li>
+                            Automatically checks whether the dataset is about
+                            batting, bowling, or both, and adjusts the scoring
+                            method accordingly.
+                        </li>
+
+                        <li>
+                            Built a Player vs Player comparison tool where
+                            users pick any two players and see their stats
+                            side-by-side in a table and a bar chart.
+                        </li>
+
+                        <li>
+                            Added model accuracy checks (like R² score, error
+                            rates) so the app can tell you if its predictions
+                            are reliable or if the model is overfitting/
+                            underfitting.
+                        </li>
+
+                        <li>
+                            Created an "Image Analysis" feature that uses
+                            AI-based pose detection (MediaPipe) to study a
+                            cricketer's photo and measure their body posture.
+                        </li>
+
+                        <li>
+                            Measured key body angles such as elbow bend,
+                            knee bend, shoulder alignment, and stance width
+                            to judge batting or bowling technique.
+                        </li>
+
+                        <li>
+                            Compared these measured angles to "ideal" values
+                            used by professional players, and gave a score
+                            out of 100 based on how close the technique is.
+                        </li>
+
+                        <li>
+                            Built a "Video Analysis" feature that does the
+                            same body-posture check but frame-by-frame across
+                            an entire video, not just one photo.
+                        </li>
+
+                        <li>
+                            Automatically picked the best-performing moments
+                            from the video (top 30% of frames) to give a fair
+                            final score, ignoring bad or blurry frames.
+                        </li>
+
+                        <li>
+                            Generated automatic, easy-to-read coaching
+                            feedback (like "improve your balance" or
+                            "great technique") based on the final score.
+                        </li>
+
+                        <li>
+                            Added visual, color-coded performance reports
+                            (Elite, Good, Average, Needs Improvement) so
+                            users can quickly understand results without
+                            reading numbers.
+                        </li>
+
+                        <li>
+                            Used Plotly to create interactive charts and
+                            graphs, so users can explore player rankings
+                            and comparisons visually.
+                        </li>
+
+                        <li>
+                            Designed the whole app to work for both batting
+                            and bowling analysis, making it useful for many
+                            types of cricket players.
+                        </li>
+
+                    </ul>
+
+                    <div class="project-links">
+
+                        <a
+                            href="https://cricket-talent-identification-system-pqcvahy8h56ujuncwp4m89.streamlit.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn">
+                            Live Demo
+                        </a>
+
+                        <a
+                            href="https://github.com/singhmahip688-hue/CRICKET-TALENT-IDENTIFICATION-SYSTEM"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn">
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-image-container">
 
                     <a
-                        href="https://cricket-talent-identification-system-pqcvahy8h56ujuncwp4m89.streamlit.app/"
+                        href="Images/CricketAI_Talent_Identification_System_Demo.png"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn">Live Demo
-                    </a>
+                        class="project-image-link"
+                        title="Click to open full-size project image">
 
-                    <a
-                        href="https://github.com/singhmahip688-hue/CRICKET-TALENT-IDENTIFICATION-SYSTEM"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn">GitHub
+                        <img
+                            src="Images/CricketAI_Talent_Identification_System_Demo.png"
+                            alt="CricketVision AI Project Screenshot"
+                            class="project-image">
+
                     </a>
 
                 </div>
@@ -192,141 +375,121 @@
             </div>
 
 
-            <!-- PROJECT IMAGE -->
+            <!-- ================= PROJECT 2 ================= -->
 
-            <div class="project-image-container">
+            <div class="project-card project-card-featured stagger-item">
 
-                <a
-                    href="Images/CricketAI_Talent_Identification_System_Demo.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-image-link"
-                    title="Click to open full-size project image">
+                <div class="project-content">
 
-                    <img
-                        src="Images/CricketAI_Talent_Identification_System_Demo.png"
-                        alt="CricketVision AI Project Screenshot"
-                        class="project-image">
+                    <h3>
+                        CodeAudit AI – Intelligent Static Code Analysis
+                        & Repository Review Platform
+                    </h3>
 
-                </a>
+                    <p>
+                        <strong>Tech Used:</strong>
+                        Python, Flask, Flask-CORS, Radon, Gunicorn,
+                        HTML, CSS, JavaScript
+                    </p>
 
-            </div>
+                    <ul>
 
-        </div>
+                        <li>
+                            Developed a full-stack AI-powered code review tool
+                            with a Flask backend and lightweight web dashboard
+                            for real-time code analysis.
+                        </li>
 
-        <!-- ================= PROJECT 2 ================= -->
+                        <li>
+                            Built two analysis modes: single code-snippet
+                            review and complete GitHub repository scanning.
+                        </li>
 
-        <div class="project-card project-card-featured stagger-item">
+                        <li>
+                            Integrated an LLM-based review engine to
+                            automatically identify bugs and code smells with
+                            a quality score for individual files.
+                        </li>
 
-            <!-- PROJECT DESCRIPTION -->
+                        <li>
+                            Used Radon to calculate static code-complexity
+                            metrics, combining AI-generated feedback with
+                            objective maintainability scoring.
+                        </li>
 
-            <div class="project-content">
+                        <li>
+                            Designed a repository dashboard displaying
+                            file-level scores, bug counts, code smells,
+                            and worst-performing files.
+                        </li>
 
-                <h3>
-                    CodeAudit AI – Intelligent Static Code Analysis & Repository Review Platform
-                </h3>
+                        <li>
+                            Deployed the backend using Render and the frontend
+                            using GitHub Pages with Flask-CORS for
+                            cross-origin communication.
+                        </li>
 
-                <p>
-                    <strong>Tech Used:</strong>
-                    Python, Flask, Flask-CORS, Radon, Gunicorn,
-                    HTML, CSS, JavaScript
-                </p>
+                    </ul>
 
-                <ul>
+                    <div class="project-links">
 
-                    <li>
-                        Developed a full-stack AI-powered code review tool with a
-                        Flask backend and lightweight web dashboard for real-time
-                        code analysis.
-                    </li>
+                        <a
+                            href="https://singhmahip688-hue.github.io/AI-CODE-REVIEWER/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn">
+                            Live Demo
+                        </a>
 
-                    <li>
-                        Built two analysis modes: single code-snippet review and
-                        complete GitHub repository scanning.
-                    </li>
+                        <a
+                            href="https://github.com/singhmahip688-hue/AI-CODE-REVIEWER"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn">
+                            GitHub
+                        </a>
 
-                    <li>
-                        Integrated an LLM-based review engine to automatically
-                        identify bugs and code smells with a quality score for
-                        individual files.
-                    </li>
+                    </div>
 
-                    <li>
-                        Used Radon to calculate static code-complexity metrics,
-                        combining AI-generated feedback with objective maintainability
-                        scoring.
-                    </li>
-
-                    <li>
-                        Designed a repository dashboard displaying file-level
-                        scores, bug counts, code smells, and worst-performing files.
-                    </li>
-
-                    <li>
-                        Deployed the backend using Render and the frontend using
-                        GitHub Pages with Flask-CORS for cross-origin communication.
-                    </li>
-
-                </ul>
+                </div>
 
 
-                <div class="project-links">
-
-                    <a
-                        href="https://singhmahip688-hue.github.io/AI-CODE-REVIEWER/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn">Live Demo
-                    </a>
+                <div class="project-image-container">
 
                     <a
-                        href="https://github.com/singhmahip688-hue/AI-CODE-REVIEWER"
+                        href="Images/Ai_CodeAudit_Demo.png"
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="btn">GitHub
+                        class="project-image-link"
+                        title="Click to open full-size project image">
+
+                        <img
+                            src="Images/Ai_CodeAudit_Demo.png"
+                            alt="CodeAudit AI Project Screenshot"
+                            class="project-image">
+
                     </a>
 
                 </div>
 
             </div>
 
-
-            <!-- PROJECT IMAGE -->
-
-            <div class="project-image-container">
-
-                <a
-                    href="Images/Ai_CodeAudit_Demo.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="project-image-link"
-                    title="Click to open full-size project image">
-
-                    <img
-                        src="Images/Ai_CodeAudit_Demo.png"
-                        alt="CodeAudit AI Project Screenshot"
-                        class="project-image">
-
-                </a>
-
-            </div>
-
         </div>
-
-    </div>
 
     </section>
 
 
-    <!-- ================= WORK EXPERIENCE ================= -->
-
+    <!-- =========================================================
+         WORK EXPERIENCE
+         ========================================================= -->
     <section id="work-experience">
 
         <h2>Work Experience</h2>
 
         <div class="projects-grid">
 
-            <!-- ================= FLYRANK AI (ONGOING) ================= -->
+
+            <!-- ================= FLYRANK AI ================= -->
 
             <div class="project-card project-card-featured stagger-item">
 
@@ -337,46 +500,61 @@
                         <span class="status-badge ongoing">Ongoing</span>
                     </h3>
 
-                    <p class="job-role">Machine Learning Engineering Intern</p>
-                    <p class="job-duration">July 2026 – Present &nbsp;|&nbsp; Remote</p>
+                    <p class="job-role">
+                        Machine Learning Engineering Intern
+                    </p>
+
+                    <p class="job-duration">
+                        July 2026 – Present &nbsp;|&nbsp; Remote
+                    </p>
 
                     <ul>
+
                         <li>
-                            Working as an ML Engineering Intern, applying data science
-                            techniques to solve real business problems using large,
-                            real-world datasets.
+                            Working as an ML Engineering Intern, applying data
+                            science techniques to solve real business problems
+                            using large, real-world datasets.
                         </li>
+
                         <li>
-                            Cleaning and organizing messy data — handling missing values,
-                            inconsistent formats, and nested data — to make it ready for
-                            analysis.
+                            Cleaning and organizing messy data — handling
+                            missing values, inconsistent formats, and nested
+                            data — to make it ready for analysis.
                         </li>
+
                         <li>
-                            Grouping similar data points using clustering and embeddings
-                            to uncover hidden patterns and trends.
+                            Grouping similar data points using clustering and
+                            embeddings to uncover hidden patterns and trends.
                         </li>
+
                         <li>
-                            Building classification models to identify high-value
-                            opportunities hidden in the data.
+                            Building classification models to identify
+                            high-value opportunities hidden in the data.
                         </li>
+
                         <li>
                             Turning technical findings into clear, actionable
                             recommendations for stakeholders.
                         </li>
+
                     </ul>
 
                     <div class="project-links">
+
                         <a
                             href="https://github.com/singhmahip688-hue/flyrank-ml-internhip"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn">GitHub
+                            class="btn">
+                            GitHub
                         </a>
+
                     </div>
 
                 </div>
 
             </div>
+
 
             <!-- ================= CODEORBIT TECH ================= -->
 
@@ -386,72 +564,103 @@
 
                     <h3>CodeOrbit Tech</h3>
 
-                    <p class="job-role">Data Science Intern</p>
-                    <p class="job-duration">25 June 2026 – 25 July 2026 &nbsp;|&nbsp; Virtual · 1 Month</p>
+                    <p class="job-role">
+                        Data Science Intern
+                    </p>
+
+                    <p class="job-duration">
+                        25 June 2026 – 25 July 2026 &nbsp;|&nbsp;
+                        Virtual · 1 Month
+                    </p>
 
                     <ul>
+
                         <li>
-                            Completed a 1-month virtual Data Science internship focused
-                            on assignment-driven, project-based learning.
+                            Completed a 1-month virtual Data Science internship
+                            focused on assignment-driven, project-based
+                            learning.
                         </li>
+
                         <li>
-                            Performed data cleaning and exploration on real-world
-                            datasets to prepare data for analysis.
+                            Performed data cleaning and exploration on
+                            real-world datasets to prepare data for analysis.
                         </li>
+
                         <li>
-                            Conducted exploratory data analysis (EDA) to uncover
-                            trends, patterns, and correlations.
+                            Conducted exploratory data analysis (EDA) to
+                            uncover trends, patterns, and correlations.
                         </li>
+
                         <li>
-                            Implemented Simple Linear Regression to build and
-                            evaluate a predictive model.
+                            Implemented Simple Linear Regression to build
+                            and evaluate a predictive model.
                         </li>
+
                     </ul>
 
                     <div class="project-links">
+
                         <a
                             href="https://github.com/singhmahip688-hue/CodeOrbit_DataCleaning_Exploration"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn">Data Cleaning – GitHub
+                            class="btn">
+                            Data Cleaning – GitHub
                         </a>
+
                         <a
                             href="https://github.com/singhmahip688-hue/CodeOrbit_ExploratoryDataAnalysis"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn">EDA – GitHub
+                            class="btn">
+                            EDA – GitHub
                         </a>
+
                         <a
                             href="https://github.com/singhmahip688-hue/CodeOrbit_SimpleLinearRegression"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn">Linear Regression – GitHub
+                            class="btn">
+                            Linear Regression – GitHub
                         </a>
+
                     </div>
 
                 </div>
 
+
                 <div class="project-image-container">
+
                     <div class="cert-stack">
+
                         <div class="cert-item">
+
                             <div class="cert-frame-wrap">
+
                                 <iframe
                                     src="Images/COT-PRE1-5801.pdf"
                                     title="CodeOrbit Tech Certificate & LOR"
                                     class="cert-frame">
                                 </iframe>
+
                             </div>
+
                             <a
                                 href="Images/COT-PRE1-5801.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="cert-view-link">View Certificate & LOR
+                                class="cert-view-link">
+                                View Certificate & LOR
                             </a>
+
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
+
 
             <!-- ================= OASIS INFOBYTE ================= -->
 
@@ -461,91 +670,132 @@
 
                     <h3>Oasis Infobyte</h3>
 
-                    <p class="job-role">Data Science Intern (AICTE OIB-SIP)</p>
-                    <p class="job-duration">05 July 2026 – 15 August 2026 &nbsp;|&nbsp; Virtual · 1 Month</p>
+                    <p class="job-role">
+                        Data Science Intern (AICTE OIB-SIP)
+                    </p>
+
+                    <p class="job-duration">
+                        05 July 2026 – 15 August 2026 &nbsp;|&nbsp;
+                        Virtual · 1 Month
+                    </p>
 
                     <ul>
+
                         <li>
                             Completed the AICTE-affiliated OIB-SIP Data Science
                             internship, working through a series of hands-on,
                             project-based tasks.
                         </li>
+
                         <li>
-                            Applied data analysis and machine learning concepts to
-                            real datasets, focusing on accuracy, deadlines, and
-                            clean, well-documented work.
+                            Applied data analysis and machine learning concepts
+                            to real datasets, focusing on accuracy, deadlines,
+                            and clean, well-documented work.
                         </li>
+
                         <li>
                             Demonstrated strong analytical and problem-solving
-                            skills while working both independently and as part
-                            of a team.
+                            skills while working both independently and as
+                            part of a team.
                         </li>
+
                         <li>
-                            Recognized as a <strong>Star Performer</strong> of the
-                            AICTE Oasis Infobyte Internship for exceptional
+                            Recognized as a <strong>Star Performer</strong> of
+                            the AICTE Oasis Infobyte Internship for exceptional
                             dedication and outstanding contributions.
                         </li>
+
                     </ul>
 
                     <div class="project-links">
+
                         <a
                             href="https://github.com/singhmahip688-hue/OIBSIP"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="btn">GitHub
+                            class="btn">
+                            GitHub
                         </a>
+
                     </div>
 
                 </div>
 
+
                 <div class="project-image-container">
+
                     <div class="cert-stack">
+
                         <div class="cert-item">
+
                             <div class="cert-frame-wrap">
+
                                 <iframe
                                     src="Images/Completion Certificate - Mahip Singh.pdf"
                                     title="Oasis Infobyte Completion Certificate"
                                     class="cert-frame">
                                 </iframe>
+
                             </div>
+
                             <a
                                 href="Images/Completion Certificate - Mahip Singh.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="cert-view-link">View Completion Certificate
+                                class="cert-view-link">
+                                View Completion Certificate
                             </a>
+
                         </div>
+
+
                         <div class="cert-item">
+
                             <div class="cert-frame-wrap">
+
                                 <iframe
                                     src="Images/Appreciation Certificate - Mahip Singh.pdf"
                                     title="Oasis Infobyte Appreciation Certificate"
                                     class="cert-frame">
                                 </iframe>
+
                             </div>
+
                             <a
                                 href="Images/Appreciation Certificate - Mahip Singh.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="cert-view-link">View Appreciation Certificate
+                                class="cert-view-link">
+                                View Appreciation Certificate
                             </a>
+
                         </div>
+
+
                         <div class="cert-item">
+
                             <div class="cert-frame-wrap">
+
                                 <iframe
                                     src="Images/LOR - Mahip Singh.pdf"
                                     title="Oasis Infobyte Letter of Recommendation"
                                     class="cert-frame">
                                 </iframe>
+
                             </div>
+
                             <a
                                 href="Images/LOR - Mahip Singh.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="cert-view-link">View Letter of Recommendation
+                                class="cert-view-link">
+                                View Letter of Recommendation
                             </a>
+
                         </div>
+
                     </div>
+
                 </div>
 
             </div>
@@ -555,101 +805,251 @@
     </section>
 
 
-    <!-- ================= EDUCATION ================= -->
-
+    <!-- =========================================================
+         EDUCATION
+         ========================================================= -->
     <section id="education">
 
         <h2>Education</h2>
 
         <div class="education-grid">
 
+
             <!-- ================= COLLEGE ================= -->
 
             <div class="education-card stagger-item">
-                <h3>Sir M. Visvesvaraya Institute of Technology</h3>
+
+                <h3>
+                    Sir M. Visvesvaraya Institute of Technology
+                </h3>
+
                 <div class="edu-meta">
-                    <span><strong>Degree:</strong> B.E. in Information Science Engineering</span>
-                    <span><strong>Duration:</strong> 2023 – 2027 (Expected)</span>
-                    <span><strong>Location:</strong> Bengaluru, Karnataka</span>
-                    <span><strong>CGPA:</strong> 7.25</span>
+
+                    <span>
+                        <strong>Degree:</strong>
+                        B.E. in Information Science Engineering
+                    </span>
+
+                    <span>
+                        <strong>Duration:</strong>
+                        2023 – 2027 (Expected)
+                    </span>
+
+                    <span>
+                        <strong>Location:</strong>
+                        Bengaluru, Karnataka
+                    </span>
+
+                    <span>
+                        <strong>CGPA:</strong>
+                        7.25
+                    </span>
+
                 </div>
+
                 <p>
-                    Currently pursuing a Bachelor of Engineering in Information Science
-                    Engineering, with coursework spanning Data Structures & Algorithms,
-                    Object-Oriented Programming, DBMS, and Operating Systems, alongside
-                    hands-on project work in Machine Learning, Deep Learning, and
-                    Computer Vision.
+                    Currently pursuing a Bachelor of Engineering in
+                    Information Science Engineering, with coursework
+                    spanning Data Structures & Algorithms,
+                    Object-Oriented Programming, DBMS, and Operating
+                    Systems, alongside hands-on project work in Machine
+                    Learning, Deep Learning, and Computer Vision.
                 </p>
+
             </div>
 
-            <!-- ================= 12TH / PUC ================= -->
+
+            <!-- ================= 12TH ================= -->
 
             <div class="education-card stagger-item">
-                <h3>Air Force School Jalahalli East</h3>
+
+                <h3>
+                    Air Force School Jalahalli East
+                </h3>
+
                 <div class="edu-meta">
-                    <span><strong>Examination:</strong> CBSE Senior School Certificate (Class 12), 2023</span>
-                    <span><strong>Percentage:</strong> 67.20%</span>
-                    <span><strong>Result:</strong> PASS</span>
+
+                    <span>
+                        <strong>Examination:</strong>
+                        CBSE Senior School Certificate (Class 12), 2023
+                    </span>
+
+                    <span>
+                        <strong>Percentage:</strong>
+                        67.20%
+                    </span>
+
+                    <span>
+                        <strong>Result:</strong>
+                        PASS
+                    </span>
+
                 </div>
+
                 <table class="edu-table">
+
                     <thead>
+
                         <tr>
                             <th>Subject</th>
                             <th>Marks Obtained</th>
                             <th>Grade</th>
                         </tr>
+
                     </thead>
+
                     <tbody>
-                        <tr><td>English Elective</td><td>66</td><td>C2</td></tr>
-                        <tr><td>Mathematics</td><td>54</td><td>C2</td></tr>
-                        <tr><td>Physics</td><td>63</td><td>C1</td></tr>
-                        <tr><td>Chemistry</td><td>60</td><td>C2</td></tr>
-                        <tr><td>Physical Education</td><td>93</td><td>A1</td></tr>
+
+                        <tr>
+                            <td>English Elective</td>
+                            <td>66</td>
+                            <td>C2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mathematics</td>
+                            <td>54</td>
+                            <td>C2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Physics</td>
+                            <td>63</td>
+                            <td>C1</td>
+                        </tr>
+
+                        <tr>
+                            <td>Chemistry</td>
+                            <td>60</td>
+                            <td>C2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Physical Education</td>
+                            <td>93</td>
+                            <td>A1</td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
 
             <!-- ================= 10TH ================= -->
 
             <div class="education-card stagger-item">
-                <h3>Air Force School Jalahalli East</h3>
+
+                <h3>
+                    Air Force School Jalahalli East
+                </h3>
+
                 <div class="edu-meta">
-                    <span><strong>Examination:</strong> CBSE Secondary School Examination (Class 10), 2021</span>
-                    <span><strong>Percentage:</strong> 74.80%</span>
-                    <span><strong>Result:</strong> PASS</span>
+
+                    <span>
+                        <strong>Examination:</strong>
+                        CBSE Secondary School Examination (Class 10), 2021
+                    </span>
+
+                    <span>
+                        <strong>Percentage:</strong>
+                        74.80%
+                    </span>
+
+                    <span>
+                        <strong>Result:</strong>
+                        PASS
+                    </span>
+
                 </div>
+
                 <table class="edu-table">
+
                     <thead>
+
                         <tr>
                             <th>Subject</th>
                             <th>Marks Obtained</th>
                             <th>Grade</th>
                         </tr>
+
                     </thead>
+
                     <tbody>
-                        <tr><td>English Language & Literature</td><td>81</td><td>B2</td></tr>
-                        <tr><td>Hindi Course-A</td><td>88</td><td>A2</td></tr>
-                        <tr><td>Mathematics Standard</td><td>68</td><td>B2</td></tr>
-                        <tr><td>Science</td><td>65</td><td>B2</td></tr>
-                        <tr><td>Social Science</td><td>72</td><td>C1</td></tr>
-                        <tr><td>Information Technology (Additional)</td><td>88</td><td>B2</td></tr>
+
+                        <tr>
+                            <td>English Language & Literature</td>
+                            <td>81</td>
+                            <td>B2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Hindi Course-A</td>
+                            <td>88</td>
+                            <td>A2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mathematics Standard</td>
+                            <td>68</td>
+                            <td>B2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Science</td>
+                            <td>65</td>
+                            <td>B2</td>
+                        </tr>
+
+                        <tr>
+                            <td>Social Science</td>
+                            <td>72</td>
+                            <td>C1</td>
+                        </tr>
+
+                        <tr>
+                            <td>Information Technology (Additional)</td>
+                            <td>88</td>
+                            <td>B2</td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
 
         </div>
 
     </section>
 
+
+    <!-- =========================================================
+         STUDY MATERIALS
+         ========================================================= -->
     <section id="Study-Materials">
+
         <h2>Study Materials</h2>
 
         <div class="study-wrapper">
 
+
+            <!-- JAVA -->
+
             <div class="study-category">
-                <h3 class="study-heading"><span class="study-icon">☕</span>HandWritten JAVA Notes</h3>
-                <span class="study-count">20 notes</span>
+
+                <h3 class="study-heading">
+                    <span class="study-icon">☕</span>
+                    HandWritten JAVA Notes
+                </h3>
+
+                <span class="study-count">
+                    20 notes
+                </span>
+
                 <div class="notes-grid">
+
                     <a href="Images/JAVA FOR BEGINNERS CHAPTER - 0.pdf" target="_blank" class="note-link">Basic Structure of Java</a>
                     <a href="Images/CHAP1_compressed.pdf" target="_blank" class="note-link">Variables and Datatypes</a>
                     <a href="Images/PRACTICE_SET_1.pdf" target="_blank" class="note-link">Practice Set 1</a>
@@ -675,14 +1075,28 @@
                     <a href="Images/packages.pdf" target="_blank" class="note-link">Packages in Java</a>
                     <a href="Images/multithreading.pdf" target="_blank" class="note-link">MultiThreading in Java</a>
                     <a href="Images/practice_set_13.pdf" target="_blank" class="note-link">Practice Set 13</a>
-                    <a href="Images/errors_exception.pdf" target="_blank" class="note-link">Error & Exception in Java </a>
+                    <a href="Images/errors_exception.pdf" target="_blank" class="note-link">Error & Exception in Java</a>
+
                 </div>
+
             </div>
 
+
+            <!-- PYTHON -->
+
             <div class="study-category">
-                <h3 class="study-heading"><span class="study-icon">🐍</span>HandWritten PYTHON Notes</h3>
-                <span class="study-count">6 notes</span>
+
+                <h3 class="study-heading">
+                    <span class="study-icon">🐍</span>
+                    HandWritten PYTHON Notes
+                </h3>
+
+                <span class="study-count">
+                    6 notes
+                </span>
+
                 <div class="notes-grid">
+
                     <a href="Images/PYTHON CHAPTER 1 .pdf" target="_blank" class="note-link">Modules, Comments & Pip</a>
                     <a href="Images/PYTHON CHAPTER 2.pdf" target="_blank" class="note-link">Variables And Datatype</a>
                     <a href="Images/PYTHON CHAPTER 3.pdf" target="_blank" class="note-link">Strings</a>
@@ -692,64 +1106,112 @@
                     <a href="Images/loops_python.pdf" target="_blank" class="note-link">Loops in Python</a>
                     <a href="functions_recursion.pdf" target="_blank" class="note-link">Functions & Recursion</a>
                     <a href="Images/snake_water_gun_game.pdf" target="_blank" class="note-link">Snake, Water & Gun Game Project</a>
-                    <a href="Images/file_io.pdf" target="_blank" class="note-link">File I/O in Python </a>
+                    <a href="Images/file_io.pdf" target="_blank" class="note-link">File I/O in Python</a>
                     <a href="Images/PYTHON CHAPTER 6.pdf" target="_blank" class="note-link">Conditional Expression</a>
                     <a href="Images/oops_python.pdf" target="_blank" class="note-link">Oops in Python</a>
                     <a href="Images/inheritance_python.pdf" target="_blank" class="note-link">Inheritance in Python</a>
+
                 </div>
+
             </div>
 
+
+            <!-- MACHINE LEARNING -->
+
             <div class="study-category">
-                <h3 class="study-heading"><span class="study-icon">🤖</span>HandWritten MACHINE LEARNING Notes</h3>
-                <span class="study-count">6 notes</span>
+
+                <h3 class="study-heading">
+                    <span class="study-icon">🤖</span>
+                    HandWritten MACHINE LEARNING Notes
+                </h3>
+
+                <span class="study-count">
+                    6 notes
+                </span>
+
                 <div class="notes-grid">
+
                     <a href="Images/ML_Basics_and_Introduction.pdf" target="_blank" class="note-link">ML Basics & Introduction</a>
                     <a href="Images/Data_Analysis.pdf" target="_blank" class="note-link">Data Analysis and ML Libraries</a>
                     <a href="Images/Ml Algorithm-1.pdf" target="_blank" class="note-link">Ml Algorithm Part-1</a>
                     <a href="Images/Ml_Algorithm_2.pdf" target="_blank" class="note-link">Ml Algorithm Part-2</a>
                     <a href="Images/MySQL_Tutorial.pdf" target="_blank" class="note-link">My SQL Tutorial For Beginners</a>
                     <a href="Images/Deep_Learning.pdf" target="_blank" class="note-link">Deep Learning Tutorial</a>
+
                 </div>
+
             </div>
 
         </div>
+
     </section>
 
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
     <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Let's connect! Feel free to reach out for opportunities, collaborations, or just to say hello.</p>
 
-    <div class="contact-links">
-        <p>
-            📧 <strong>Email:</strong>
-            <a href="mailto:singhmahip688@gmail.com">
-                singhmahip688@gmail.com
-            </a>
-        </p>
+        <h2>Contact Me</h2>
 
         <p>
-            💼 <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/mahip-singh-2b765738b"
-               target="_blank" rel="noopener noreferrer">
-                Mahip Singh
-            </a>
+            Let's connect! Feel free to reach out for opportunities,
+            collaborations, or just to say hello.
         </p>
 
-        <p>
-            📷 <strong>Instagram:</strong>
-            <a href="https://www.instagram.com/antaryami_.xd/"
-               target="_blank" rel="noopener noreferrer">
-                @antaryami_.xd
-            </a>
-        </p>
-    </div>
-</section>
+        <div class="contact-links">
+
+            <p>
+                📧 <strong>Email:</strong>
+                <a href="mailto:singhmahip688@gmail.com">
+                    singhmahip688@gmail.com
+                </a>
+            </p>
+
+            <p>
+                💼 <strong>LinkedIn:</strong>
+                <a
+                    href="https://www.linkedin.com/in/mahip-singh-2b765738b"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Mahip Singh
+                </a>
+            </p>
+
+            <p>
+                📷 <strong>Instagram:</strong>
+                <a
+                    href="https://www.instagram.com/antaryami_.xd/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    @antaryami_.xd
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
     <footer>
         <p>© 2026 Mahip Singh</p>
     </footer>
 
-    <button id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- BACK TO TOP -->
+    <button
+        id="backToTop"
+        aria-label="Back to top">
+        ↑
+    </button>
+
 
     <script src="script.js"></script>
+
 </body>
 </html>
+
+
